@@ -1,6 +1,6 @@
-require 'pry'
+#require 'pry'
 
-def remove_strawberry
+def remove_strawberry(contacts)
    #contacts = {
   #   "Jon Snow" => {
   #     name: "Jon",
@@ -14,10 +14,10 @@ def remove_strawberry
   #   }
 #  }
 
-["Freddy Mercury"][:favorite_ice_cream_flavors].delete("strawberry")
+contacts.each do |people, elements|
 
-
-remove_strawberry(contacts).each do |person, contact_hash|
-  binding.pry
-
+  if people == "Freddy Mercury"
+  elements[:favorite_ice_cream_flavors].shift
+end
+end
 end
